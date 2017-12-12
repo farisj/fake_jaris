@@ -28,3 +28,8 @@ MyBot.new("fake_jaris") do |bot|
   bot.access_token = ENV["access_token_fake_jaris"] # Token connecting the app to this account
   bot.access_token_secret = ENV["access_token_secret_fake_jaris"] # Secret connecting the app to this account
 end
+
+MyBot.new("BotAshton") do |bot|
+  bot.access_token = ENV["access_token_BotAshton"] # Token connecting the app to this account
+  bot.access_token_secret = ENV["access_token_secret_BotAshton"] # Secret connecting the app to this account
+end
