@@ -13,7 +13,7 @@ class MyBot < Ebooks::Bot
 
   def on_startup
     @model = Ebooks::Model.load('model/mine.model')
-    scheduler.every '2h' do
+    scheduler.every '10m' do
       tweet(@model.make_statement(140))
     end
   end
