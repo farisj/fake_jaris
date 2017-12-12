@@ -6,8 +6,8 @@ require 'twitter_ebooks'
 class MyBot < Ebooks::Bot
   # Configuration here applies to all MyBots
   def configure
-    self.consumer_key = ENV["consumer_key"] # Your app consumer key
-    self.consumer_secret = ENV["consumer_secret"] # Your app consumer secret
+    self.consumer_key = ENV["consumer_key_#{username}"] # Your app consumer key
+    self.consumer_secret = ENV["consumer_secret_#{username}"] # Your app consumer secret
     self.delay_range = 1..6
   end
 
