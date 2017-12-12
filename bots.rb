@@ -5,6 +5,11 @@ require 'twitter_ebooks'
 
 class MyBot < Ebooks::Bot
   # Configuration here applies to all MyBots
+  FREQUENCY = {
+    'fake_jaris' => '2h',
+    'BotAshton' => '5m'
+  }
+
   def configure
     self.consumer_key = ENV["consumer_key_#{username}"] # Your app consumer key
     self.consumer_secret = ENV["consumer_secret_#{username}"] # Your app consumer secret
@@ -13,7 +18,7 @@ class MyBot < Ebooks::Bot
 
   def on_startup
     @model = Ebooks::Model.load("model/#{username}.model")
-    scheduler.every '10m' do
+    scheduler.every FREQUENCY[username] do
       tweet(@model.make_statement(140))
     end
   end
