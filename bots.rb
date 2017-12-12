@@ -7,7 +7,7 @@ class MyBot < Ebooks::Bot
   # Configuration here applies to all MyBots
   FREQUENCY = {
     'fake_jaris' => '2h',
-    'BotAshton' => '5m'
+    'BotAshton' => '1h'
   }
 
   def configure
