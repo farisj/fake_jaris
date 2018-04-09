@@ -6,7 +6,7 @@ require 'twitter_ebooks'
 class MyBot < Ebooks::Bot
   # Configuration here applies to all MyBots
   FREQUENCY = {
-    'fake_jaris' => '2h',
+    'real_jaris' => '2h',
     'BotAshton' => '1h'
   }
 
@@ -29,7 +29,7 @@ class MyBot < Ebooks::Bot
 end
 
 # Make a MyBot and attach it to an account
-MyBot.new("fake_jaris") do |bot|
+MyBot.new("real_jaris") do |bot|
   bot.access_token = ENV["access_token_fake_jaris"] # Token connecting the app to this account
   bot.access_token_secret = ENV["access_token_secret_fake_jaris"] # Secret connecting the app to this account
 end
