@@ -30,8 +30,8 @@ end
 
 # Make a MyBot and attach it to an account
 MyBot.new("real_jaris") do |bot|
-  bot.access_token = ENV["access_token_fake_jaris"] # Token connecting the app to this account
-  bot.access_token_secret = ENV["access_token_secret_fake_jaris"] # Secret connecting the app to this account
+  bot.access_token = ENV["access_token_real_jaris"] # Token connecting the app to this account
+  bot.access_token_secret = ENV["access_token_secret_real_jaris"] # Secret connecting the app to this account
 end
 
 MyBot.new("BotAshton") do |bot|
